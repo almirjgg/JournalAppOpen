@@ -18,13 +18,14 @@ import {
 } from '../../store/auth';
 import { useForm } from '../../hooks';
 
+const formData = {
+  email: '',
+  password: '',
+};
 export const LoginPage = () => {
   const { status, errorMessage } = useSelector(state => state.auth);
   const dispatch = useDispatch();
-  const { email, password, onInputChange } = useForm({
-    email: 'almirjgg@gmail.com',
-    password: '123456',
-  });
+  const { email, password, onInputChange } = useForm(formData);
   const isAuthenticated = useMemo(() => status === 'authenticated', [status]);
   const onSubmit = event => {
     event.preventDefault();
