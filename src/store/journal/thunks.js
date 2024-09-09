@@ -14,7 +14,6 @@ import {
   setSaving,
   noteUpdated,
   setPhotosToActiveNote,
-  clearNoteLogout,
   deleteNoteById,
 } from './';
 import { fileUpload, loadNotes } from '../../helpers';
