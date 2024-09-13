@@ -1,3 +1,4 @@
+
 import { configureStore } from '@reduxjs/toolkit';
 import { authSlice } from './auth';
 import { journalSlice } from './journal';
